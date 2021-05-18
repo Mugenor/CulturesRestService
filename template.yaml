@@ -23,7 +23,7 @@ Resources:
             Method: POST
     Metadata:
       DockerTag: latest
-      DockerContext: ./hello_world
+      DockerContext: ./src
       Dockerfile: Dockerfile
 
 Outputs:
