@@ -1,0 +1,55 @@
+Initiating deployment
+=====================
+CulturesRestServiceFunction may not have authorization defined.
+Uploading to culture-model/1b038a2542f23cbc0e8cf4310f799c6a.template  944 / 944  (100.00%)
+
+Waiting for changeset to be created..
+
+CloudFormation stack changeset
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Operation                                                 LogicalResourceId                                         ResourceType                                              Replacement
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
++ Add                                                     CulturesRestServiceFunctionCulturesRestPermission         AWS::Lambda::Permission                                   N/A
++ Add                                                     CulturesRestServiceFunctionRole                           AWS::IAM::Role                                            N/A
++ Add                                                     CulturesRestServiceFunction                               AWS::Lambda::Function                                     N/A
++ Add                                                     ServerlessHttpApiApiGatewayDefaultStage                   AWS::ApiGatewayV2::Stage                                  N/A
++ Add                                                     ServerlessHttpApi                                         AWS::ApiGatewayV2::Api                                    N/A
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changeset created successfully. arn:aws:cloudformation:eu-central-1:683983001011:changeSet/samcli-deploy1621761204/a9350d8c-011c-449c-842f-38ed460b13c1
+
+
+2021-05-23 12:13:31 - Waiting for stack create/update to complete
+
+CloudFormation events from changeset
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ResourceStatus                                            ResourceType                                              LogicalResourceId                                         ResourceStatusReason
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE_IN_PROGRESS                                        AWS::IAM::Role                                            CulturesRestServiceFunctionRole                           -
+CREATE_IN_PROGRESS                                        AWS::IAM::Role                                            CulturesRestServiceFunctionRole                           Resource creation Initiated
+CREATE_COMPLETE                                           AWS::IAM::Role                                            CulturesRestServiceFunctionRole                           -
+CREATE_IN_PROGRESS                                        AWS::Lambda::Function                                     CulturesRestServiceFunction                               -
+CREATE_IN_PROGRESS                                        AWS::Lambda::Function                                     CulturesRestServiceFunction                               Resource creation Initiated
+CREATE_COMPLETE                                           AWS::Lambda::Function                                     CulturesRestServiceFunction                               -
+CREATE_IN_PROGRESS                                        AWS::ApiGatewayV2::Api                                    ServerlessHttpApi                                         -
+CREATE_COMPLETE                                           AWS::ApiGatewayV2::Api                                    ServerlessHttpApi                                         -
+CREATE_IN_PROGRESS                                        AWS::ApiGatewayV2::Api                                    ServerlessHttpApi                                         Resource creation Initiated
+CREATE_IN_PROGRESS                                        AWS::ApiGatewayV2::Stage                                  ServerlessHttpApiApiGatewayDefaultStage                   -
+CREATE_IN_PROGRESS                                        AWS::Lambda::Permission                                   CulturesRestServiceFunctionCulturesRestPermission         Resource creation Initiated
+CREATE_IN_PROGRESS                                        AWS::Lambda::Permission                                   CulturesRestServiceFunctionCulturesRestPermission         -
+CREATE_COMPLETE                                           AWS::ApiGatewayV2::Stage                                  ServerlessHttpApiApiGatewayDefaultStage                   -
+CREATE_IN_PROGRESS                                        AWS::ApiGatewayV2::Stage                                  ServerlessHttpApiApiGatewayDefaultStage                   Resource creation Initiated
+CREATE_COMPLETE                                           AWS::Lambda::Permission                                   CulturesRestServiceFunctionCulturesRestPermission         -
+CREATE_COMPLETE                                           AWS::CloudFormation::Stack                                culture-model                                             -
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CloudFormation outputs from deployed stack
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Outputs
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Key                 CultureModelApi
+Description         API Gateway endpoint URL
+Value               https://ow1h2j2gy6.execute-api.eu-central-1.amazonaws.com/cultures
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Successfully created/updated stack - culture-model in eu-central-1

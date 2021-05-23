@@ -58,13 +58,11 @@ def lambda_handler(event, context):
 
         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     """
-
-    if event['httpMethod'] != 'POST':
+    print(event)
+    if event['requestContext']['http']['method'] != 'POST':
         return {
             "statusCode": 405
         }
-
-    print(event)
 
     body = json.loads(event['body'])
     cultures = body["cultures"]

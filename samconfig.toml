@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "culture-model"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-8nhulyzst25s"
+s3_prefix = "culture-model"
+region = "eu-central-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["CulturesRestServiceFunction=683983001011.dkr.ecr.eu-central-1.amazonaws.com/culture-model"]
